@@ -25,21 +25,56 @@
       font-weight: 600;
       color: white;
     }
+
+    /* Ajustes solicitados para o Painel de B.I. */
+    .header {
+      display: flex;
+      flex-direction: column;
+      /* Alinhamento vertical */
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+      /* Espaço entre título, filtros e botão */
+      padding: 20px 0;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      width: 100%;
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      /* Garante que não quebre em telas muito pequenas */
+    }
+
+    /* Diminuir o tamanho dos botões e seletores */
+    .btn-admin {
+      font-size: 12px !important;
+      padding: 6px 10px !important;
+      height: auto !important;
+      min-height: unset !important;
+      width: auto !important;
+      border-radius: 8px !important;
+    }
   </style>
 </head>
 
-
 <body>
   <div id="loading-screen">Verificando Credenciais...</div>
-
   <div class="dashboard-container">
     <header class="header">
       <h1>Painel de B.I.</h1>
       <div class="filters">
-        <select id="filter-year" class="btn-admin" style="background: var(--vinho-card); color: white; border: 1px solid rgba(255,255,255,0.1);">
+        <select id="filter-year" class="btn-admin" style="background: var(--vinho-card); color: white; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">
           <option value="Geral">Ano: Geral</option>
         </select>
-        <select id="filter-month" class="btn-admin" style="background: var(--vinho-card); color: white; border: 1px solid rgba(255,255,255,0.1);">
+        <select id="filter-month" class="btn-admin" style="background: var(--vinho-card); color: white; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">
           <option value="Geral">Mês: Geral</option>
           <option value="01">Janeiro</option>
           <option value="02">Fevereiro</option>

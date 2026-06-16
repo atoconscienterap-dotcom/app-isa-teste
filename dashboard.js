@@ -1,7 +1,7 @@
 console.log("O script do Dashboard começou a rodar!"); // Teste 1
 
 import { auth, db } from "./firebase-config.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 import {
   collection,
   getDocs,
@@ -9,7 +9,7 @@ import {
   where,
   doc,
   getDoc,
-} from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 let myChart = null;
 let todasAsAnos = new Set();
